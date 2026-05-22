@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="felt" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0%" stop-color="#16584a"/>
+      <stop offset="70%" stop-color="#0b3d2e"/>
+      <stop offset="100%" stop-color="#06251c"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5d976"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a8841f"/>
+    </linearGradient>
+    <radialGradient id="goldRim" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#f5d976"/>
+      <stop offset="100%" stop-color="#a8841f"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded square background so it looks good as an iOS icon -->
+  <rect width="512" height="512" rx="96" ry="96" fill="#06251c"/>
+
+  <!-- Outer gold ring -->
+  <circle cx="256" cy="256" r="232" fill="url(#goldRim)"/>
+
+  <!-- Decorative dashes around outer rim -->
+  <g fill="#0b3d2e">
+    <rect x="246" y="22" width="20" height="38" rx="4"/>
+    <rect x="246" y="452" width="20" height="38" rx="4"/>
+    <rect x="22" y="246" width="38" height="20" rx="4"/>
+    <rect x="452" y="246" width="38" height="20" rx="4"/>
+    <rect x="80" y="80" width="38" height="20" rx="4" transform="rotate(-45 99 90)"/>
+    <rect x="394" y="80" width="38" height="20" rx="4" transform="rotate(45 413 90)"/>
+    <rect x="80" y="412" width="38" height="20" rx="4" transform="rotate(45 99 422)"/>
+    <rect x="394" y="412" width="38" height="20" rx="4" transform="rotate(-45 413 422)"/>
+  </g>
+
+  <!-- Inner felt -->
+  <circle cx="256" cy="256" r="184" fill="url(#felt)"/>
+  <!-- Thin gold border on felt -->
+  <circle cx="256" cy="256" r="184" fill="none" stroke="#d4af37" stroke-width="3" opacity="0.7"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Stylized 'A' for Athena -->
+  <text x="256" y="338" text-anchor="middle"
+        font-family="Georgia, 'Playfair Display', serif"
+        font-size="240" font-weight="900"
+        fill="url(#gold)"
+        stroke="#7a5f12" stroke-width="2">A</text>
+
+  <!-- Subtle inner shadow on the chip -->
+  <circle cx="256" cy="256" r="184" fill="none" stroke="black" stroke-width="14" opacity="0.18"
+          style="filter: blur(6px)"/>
+</svg>

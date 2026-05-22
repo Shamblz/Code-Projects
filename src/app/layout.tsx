@@ -26,8 +26,39 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Athena Chips — Texas Hold\'em Companion',
-  description: 'Track chips, blinds, and pots for a real-life Texas Hold\'em game.',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://athena-chips.up.railway.app'),
+  title: {
+    default: 'Athena Chips — Texas Hold\'em Chip Companion',
+    template: '%s · Athena Chips',
+  },
+  description: 'Bring your own deck. Athena tracks chips, blinds, and pots so friends can play Texas Hold\'em anywhere.',
+  applicationName: 'Athena Chips',
+  manifest: '/manifest.webmanifest',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  appleWebApp: {
+    capable: true,
+    title: 'Athena Chips',
+    statusBarStyle: 'black-translucent',
+  },
+  openGraph: {
+    title: 'Athena Chips — Texas Hold\'em Chip Companion',
+    description: 'Bring your own deck. Athena tracks chips, blinds, and pots so friends can play Texas Hold\'em anywhere.',
+    type: 'website',
+    siteName: 'Athena Chips',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Athena Chips' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Athena Chips — Texas Hold\'em Chip Companion',
+    description: 'Bring your own deck. Athena tracks chips, blinds, and pots so friends can play Texas Hold\'em anywhere.',
+    images: ['/og.png'],
+  },
 };
 
 export const viewport: Viewport = {

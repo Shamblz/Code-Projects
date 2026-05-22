@@ -14,7 +14,7 @@ export function Lobby({ game, isHost, onStart }: Props) {
   useEffect(() => {
     setOrigin(window.location.origin);
   }, []);
-  const joinUrl = origin ? `${origin}/game/${game.code}` : '';
+  const joinUrl = origin ? `${origin}/j/${game.code}` : '';
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
