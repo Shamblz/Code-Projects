@@ -26,7 +26,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://athena-chips.up.railway.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://athena-chips-production-cb6d.up.railway.app'),
   title: {
     default: 'Athena Chips — Texas Hold\'em Chip Companion',
     template: '%s · Athena Chips',
